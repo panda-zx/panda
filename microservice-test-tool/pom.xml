@@ -1,0 +1,92 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>cn.pandaframework</groupId>
+    <artifactId>panda-parent</artifactId>
+    <version>1.0-SNAPSHOT</version>
+  </parent>
+  <artifactId>microservice-test-tool</artifactId>
+  <name>microservice-test-tool</name>
+  <description>microservice-test-tool</description>
+  
+  <dependencies>
+  	<dependency>
+		<groupId>cn.pandaframework</groupId>
+		<artifactId>panda-common</artifactId>
+		<version>1.0-SNAPSHOT</version>
+    </dependency>
+  	<dependency>
+		<groupId>org.openjfx</groupId>
+		<artifactId>javafx-controls</artifactId>
+		<version>20</version>
+    </dependency>
+    <dependency>
+	    <groupId>org.apache.dubbo</groupId>
+	    <artifactId>dubbo</artifactId>
+	    <version>3.2.0-beta.4</version>
+	</dependency>
+	<dependency>
+	    <groupId>org.apache.curator</groupId>
+	    <artifactId>curator-x-discovery</artifactId>
+	    <version>4.3.0</version>
+<!-- 	    <exclusions> -->
+<!-- 	    	<exclusion> -->
+<!-- 	    		<groupId>org.apache.zookeeper</groupId> -->
+<!-- 	    		<artifactId>zookeeper</artifactId> -->
+<!-- 	    	</exclusion> -->
+<!-- 	    </exclusions> -->
+	</dependency>
+	<dependency>
+	    <groupId>org.apache.zookeeper</groupId>
+	    <artifactId>zookeeper</artifactId>
+	    <version>3.8.0</version>
+	    <exclusions>
+	        <exclusion>
+	            <groupId>io.netty</groupId>
+	            <artifactId>netty-handler</artifactId>
+	        </exclusion>
+	        <exclusion>
+	            <groupId>io.netty</groupId>
+	            <artifactId>netty-transport-native-epoll</artifactId>
+	        </exclusion>
+	    </exclusions>
+	</dependency>
+	<dependency>
+	    <groupId>org.springframework</groupId>
+	    <artifactId>spring-core</artifactId>
+	    <version>6.0.7</version>
+	</dependency>
+	<dependency>
+	    <groupId>org.apache.commons</groupId>
+	    <artifactId>commons-lang3</artifactId>
+	    <version>3.12.0</version>
+	</dependency>
+	<dependency>
+	    <groupId>commons-io</groupId>
+	    <artifactId>commons-io</artifactId>
+	    <version>2.11.0</version>
+	</dependency>
+  </dependencies>
+  
+  <build>
+	<plugins>
+	  <plugin>
+		<groupId>org.openjfx</groupId>
+		<artifactId>javafx-maven-plugin</artifactId>
+		<version>0.0.8</version>
+		<configuration>
+			<mainClass>cn.pandaframework.AppStart</mainClass>
+		</configuration>
+	  </plugin>
+<!-- 	  <plugin> -->
+<!-- 		<groupId>org.apache.maven.plugins</groupId> -->
+<!-- 		<artifactId>maven-compiler-plugin</artifactId> -->
+<!-- 		<version>3.11.0</version> -->
+<!-- 		<configuration> -->
+<!-- 			<source></source> -->
+<!-- 		</configuration>			 -->
+<!-- 	  </plugin> -->
+	</plugins>
+  </build>
+  
+</project>
