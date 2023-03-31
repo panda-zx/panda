@@ -33,6 +33,12 @@ public class GreetingsServiceImpl implements GreetingsService {
 	public String sayHi(Number a) {
 		return "Number a";
 	}
+	
+	@Override
+	public String sayHi(User user) {
+		System.out.println("user");
+		return JSON.toJSONString(user);
+	}
 
 	@Override
 	public String sayHi(List<User> list) {

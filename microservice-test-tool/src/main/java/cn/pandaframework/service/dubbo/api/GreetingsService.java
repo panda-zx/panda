@@ -9,6 +9,7 @@ public interface GreetingsService {
 	String sayHi(int a);
 	String sayHi(Integer a);
 	String sayHi(Number a);
+	String sayHi(User user);
 	String sayHi(List<User> list);
 	String sayHi(Map<String,User> map);
 }
